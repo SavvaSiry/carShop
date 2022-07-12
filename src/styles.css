@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: arial, ui-serif;
+}
+
+.block {
+  min-height: 100vh;
+  background: radial-gradient(66.06% 153.21% at 66.06% 37.72%, rgba(183, 183, 183, 0.3) 0%, rgba(203, 203, 203, 0.2) 0.01%, #969696 71.99%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 85%;
+}
