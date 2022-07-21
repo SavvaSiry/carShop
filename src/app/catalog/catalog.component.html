@@ -17,95 +17,17 @@
   <div class="container">
     <div class="catalog-wrapper">
       <div class="catalog">
-        <div class="cardTitle">
+        <div class="cardTitle" *ngFor="let car of cars  | async">
           <div class="wrapperCard">
             <div class="card">
               <img class="carImage" src="assets/images/r9.png"/>
             </div>
           </div>
           <div class="car-title">
-            Audi R8
+            {{car.name}}
           </div>
           <div class="car-title">
-            350 000 $
-          </div>
-        </div>
-        <div class="cardTitle">
-          <div class="wrapperCard">
-            <div class="card">
-              <img class="carImage" src="assets/images/r9.png"/>
-            </div>
-          </div>
-          <div class="car-title">
-            Audi R8
-          </div>
-          <div class="car-title">
-            350 000 $
-          </div>
-        </div>
-        <div class="cardTitle">
-          <div class="wrapperCard">
-            <div class="card">
-              <img class="carImage" src="assets/images/r9.png"/>
-            </div>
-          </div>
-          <div class="car-title">
-            Audi R8
-          </div>
-          <div class="car-title">
-            350 000 $
-          </div>
-        </div>
-        <div class="cardTitle">
-          <div class="wrapperCard">
-            <div class="card">
-              <img class="carImage" src="assets/images/r9.png"/>
-            </div>
-          </div>
-          <div class="car-title">
-            Audi R8
-          </div>
-          <div class="car-title">
-            350 000 $
-          </div>
-        </div>
-        <div class="cardTitle">
-          <div class="wrapperCard">
-            <div class="card">
-              <img class="carImage" src="assets/images/r9.png"/>
-            </div>
-          </div>
-          <div class="car-title">
-            Audi R8
-          </div>
-          <div class="car-title">
-            350 000 $
-          </div>
-        </div>
-        <div class="cardTitle">
-          <div class="wrapperCard">
-            <div class="card">
-              <img class="carImage" src="assets/images/r9.png"/>
-            </div>
-          </div>
-          <div class="car-title">
-            Audi R8
-          </div>
-          <div class="car-title">
-            350 000 $
-          </div>
-        </div>
-        <div class="cardTitle">
-          <div class="wrapperCard">
-            <div class="card">
-              <img class="carImage" src="assets/images/r9.png"/>
-            </div>
-          </div>
-          <div class="car-title">
-            Audi R8
-          </div>
-          <div class="car-title">
-            350 000 $
+            {{car.price}}
           </div>
         </div>
       </div>
