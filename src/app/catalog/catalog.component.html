@@ -17,7 +17,7 @@
   <div class="container">
     <div class="catalog-wrapper">
       <div class="catalog">
-        <div class="cardTitle" *ngFor="let car of cars  | async">
+        <div class="cardTitle" *ngFor="let car of (cars$ | async); trackBy: trackItem">
           <div class="wrapperCard">
             <div class="card">
               <img class="carImage" src="assets/images/r9.png"/>

@@ -11,6 +11,7 @@ export class CarpageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

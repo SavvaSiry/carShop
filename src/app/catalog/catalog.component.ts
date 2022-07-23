@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {CarsApi} from '../../api';
+import {Component, OnInit} from '@angular/core';
+
+import {Observable, of} from 'rxjs'
+import {ApiService} from "../api.service";
 import {Car} from "../../moduls/car";
-import { Observable, of } from 'rxjs'
 
 @Component({
   selector: 'app-catalog',
@@ -9,9 +10,19 @@ import { Observable, of } from 'rxjs'
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent implements OnInit {
-  cars = CarsApi.cars
-  constructor() {}
+
+  cars$: Observable<Car[]> | undefined;
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
+    this.cars$ = of(ApiService.get_cars());
   }
+
+  public trackItem (index: number, item: Car) {
+    return item.id;
+  }
+
 }
