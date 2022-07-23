@@ -9,14 +9,18 @@
 .back-title {
   font-size: 13vw;
   font-weight: bold;
-  color: #000000;
+  color: #7f7f7f;
   position: fixed;
   margin-bottom: 200px;
-  z-index: auto;
+  z-index: 5;
+}
+
+.car-img {
+  z-index: 10;
 }
 
 .car-img-wrapper {
-  z-index: auto;
+  /*z-index: auto;*/
 }
 
 .car-photo-container {

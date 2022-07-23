@@ -11,18 +11,25 @@ import {Car} from "../../moduls/car";
 })
 export class CatalogComponent implements OnInit {
 
-  cars$: Observable<Car[]> | undefined;
+  // cars$: Observable<Car[]> | undefined;
+  // declare cars$: Array<Car>;
+  private static cars$: Array<Car>;
 
-  constructor() {
+  cars$ = CatalogComponent.cars$;
+  public api: ApiService = new ApiService();
 
-  }
+  // constructor(public service: ApiService) {
+  // }
 
   ngOnInit(): void {
-    this.cars$ = of(ApiService.get_cars());
   }
 
   public trackItem (index: number, item: Car) {
     return item.id;
+  }
+
+  static addCar() {
+    this.cars$ = ApiService.carsArray;
   }
 
 }
